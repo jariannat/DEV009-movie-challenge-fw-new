@@ -1,0 +1,15 @@
+{
+  "name": "dev009-movie-challenge-fw-new",
+  "version": "1.0.0",
+  "description": "- [1. Preámbulo](#1-preambulo)\r - [2. Resumen del proyecto](#2-resumen-del-proyecto)\r - [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r - [4. Consideraciones generales](#4-consideraciones-generales)\r - [5. Consideraciones técnicas](#5-consideraciones-técnicas)\r - [6. Criterios mínimos de aceptación del proyecto](#6-criterios-mínimos-de-aceptación-del-proyecto)\r - [7. Despliegue](#7-despliegue)\r - [8. Consideraciones para pedir tu Project Feedback](#8-consideraciones-para-pedir-tu-project-feedback)\r - [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
