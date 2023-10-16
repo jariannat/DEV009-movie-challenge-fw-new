@@ -1,0 +1,13 @@
+.list-loading {
+    background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.item{
+   width: 80%;
+   height: 80%;
+   background: #878585;
+}
+
