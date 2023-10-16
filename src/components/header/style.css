@@ -1,0 +1,17 @@
+.header{
+background-color: #000000;
+height: 175px;
+display: flex;
+padding: 0 64px;
+align-items: center;
+}
+
+.title { 
+font-family: sans-serif;
+color: #FF6B00;
+font-size: 80px;
+font-weight: bold;
+line-height: normal;
+padding-left: 36px;
+
+}
