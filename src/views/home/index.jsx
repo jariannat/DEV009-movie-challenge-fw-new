@@ -15,15 +15,12 @@ const HomePage = () => {
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
-    getMovie(currentPage)
+    getMovie(newPage)
     .then((result)=>{
       setData(result.data);
-
       setLoading(false);
     })
-    .catch((err)=>{
-      console.log('error getMovie:', err)
-    })
+
   };
      
   useEffect(()=>{
@@ -33,15 +30,13 @@ const HomePage = () => {
         setData(result.data);
         setLoading(false);
       })
-      .catch((err)=>{
-  console.log('error getMovie:', err)
-      })
+    
     }
 
   },[data])
-console.log('hola jariannita ', currentPage)
+
   return (
-    <div className='home-view'> 
+    <div className='home-view'    data-testid='home-view'> 
       {
         !loading?
         <MovieList 

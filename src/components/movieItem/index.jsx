@@ -1,6 +1,7 @@
 import React from "react";
 import './style.css'
-const MovielItem = ({title, year, imageUrl}) => {
+
+const MovieItem = ({title, year, imageUrl}) => {
   
   return (
     <article className="post">
@@ -13,4 +14,4 @@ const MovielItem = ({title, year, imageUrl}) => {
   );
 }
 
-export default MovielItem;
+export default MovieItem;

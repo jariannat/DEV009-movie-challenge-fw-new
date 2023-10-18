@@ -4,7 +4,7 @@ import './style.css'
 const MovieListLoading = () => {
 
     return (
-        <section  className="list-loading">
+        <section  className="list-loading" data-testid='loading-home'>
                 <div className="item" />     
         </section>
     );
