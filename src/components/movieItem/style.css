@@ -12,6 +12,8 @@ img{
         height: 340px;
         width: 350px;
         background-color: #0E0C0C ;
+        margin-top: 200px;
+        background-color: red;
 
     }
     
@@ -27,6 +29,7 @@ img{
         text-align: center;
         font-size: 20px;
         color: white;
+        background-color: blueviolet;
     }
 
     .titulo{
