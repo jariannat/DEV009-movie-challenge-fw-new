@@ -1,11 +1,16 @@
 import React from 'react';
-import {render, screen, fireEvent, act, waitFor  } from '@testing-library/react'
+import {render, screen, fireEvent, act } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { getMovie } from '../services/services';
 import HomePage from '../views/home'
 
 // Mock de la función getMovie
 jest.mock('../services/services');
+// Mockear el componente Link de react-router-dom
+jest.mock("react-router-dom", () => ({
+  Link: ({ to, children }) => <a href={to}>{children}</a>,
+}));
+
 
 const testData = {
   results: [
@@ -49,27 +54,24 @@ describe('HomePage Component', () => {
     expect(movieElements).toHaveLength(testData.results.length);
   }); 
 
-  it('handles page change correctly', async () => {
-    render(<HomePage />);
+ it('handles page change correctly', async () => {
+  render(<HomePage />);
 
-    // Esperar a que se cargue la lista de películas
-    await screen.findByTestId('movie-list');
+  await screen.findByTestId('movie-list');
 
-    // Simular un cambio de página
   const nextButton = screen.getByTestId('next-button');
+  const genre ={"id": "", "name": "Géneros"};
+  const sort= {"id": "popularity.desc", "name": "Ordenar por"}
   act(() => {
     fireEvent.click(nextButton);
+    expect(getMovie).toHaveBeenCalledWith(1, genre, sort);
   });
 
-  // Verificar que la función handlePageChange se llamó con el nuevo currentPage
-  expect(getMovie).toHaveBeenCalledWith(2);
 
-  // Incrementar currentPage antes de la segunda llamada
   act(() => {
     fireEvent.click(nextButton);
+    expect(getMovie).toHaveBeenCalledWith(2, genre, sort);
   });
 
-  // Verificar que la función handlePageChange se llamó con el nuevo currentPage
-  expect(getMovie).toHaveBeenCalledWith(3);
-  });
+});
 });

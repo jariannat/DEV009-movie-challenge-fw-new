@@ -10,7 +10,7 @@ function App() {
   <Header/>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/detail" element={<MovieDetail />} />
+      <Route path="/detail/:id" element={<MovieDetail />} />
     </Routes>
     </React.StrictMode>
   );

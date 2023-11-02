@@ -1,15 +1,18 @@
 .custom-select {
     position: relative;
-    width: 400px;
+    width: 350px;
     max-width: 100%;
-    font-size: 1.15rem;
+    font-size: 25px;
     color:black;
     margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 70px;
   }
   
   .select-button {
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    font-size: 1.15rem;
+    font-size: 28px;
     background-color: #fff;
     padding: 0.675em 1em;
     border: 1px solid #caced1;

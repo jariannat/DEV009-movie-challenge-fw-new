@@ -4,6 +4,11 @@ import '@testing-library/jest-dom'
 
 import MovieList from "../components/movieList";
 
+// Mockear el componente Link de react-router-dom
+jest.mock("react-router-dom", () => ({
+  Link: ({ to, children }) => <a href={to}>{children}</a>,
+}));
+
 const testData = [
   {
     id: 1,
