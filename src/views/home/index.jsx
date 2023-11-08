@@ -1,5 +1,6 @@
 // HomePage.js
 import React, { useEffect, useState } from 'react';
+
 import { getMovie } from '../../services/services';
 import MovieList from '../../components/movieList';
 import MovieListLoading from '../../components/loadingHome';
