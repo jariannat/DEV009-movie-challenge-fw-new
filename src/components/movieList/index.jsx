@@ -17,12 +17,12 @@ const MovieList = ({ data, page, cantPage, handleClickPage }) => {
       };
 
     return (
-        <section className="container" >
-            <div className="list" data-testid='movie-list'>
+        <section className="container" data-testid='movie-list'>
+            <div className="list" >
            {
                     data.map(movie => {
                         const releaseYear = new Date(movie.release_date).getFullYear();
-                        return <MovieItem title={movie.title} year={releaseYear} imageUrl={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} key={movie.id} />
+                        return <MovieItem title={movie.title} year={releaseYear} imageUrl={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} key={movie.id} id={movie.id} />
                     })
                 }  
              </div>

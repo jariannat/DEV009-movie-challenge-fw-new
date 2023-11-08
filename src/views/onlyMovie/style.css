@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+}
+.detail-poster{
+ padding-bottom: 50px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+    margin: 0 50px ;
+    text-align: justify;
+    width: 50%;
+  
+  }
+  
+  .order .movieTitle {
+    margin: 10px 0;
+    text-align: justify;
+  }
+  
+  .order .overview {
+    margin: 10px 0;
+    justify-content: center;
+    text-align: justify;
+    width: 678px;
+  }
+  
+  .order .vote_count {
+    margin: 10px 0;
+  }
+  
+  .order .release_date {
+    margin: 10px 0;
+  }
+  .poster-image{
+    width: 50%;
+height: 600px;
+  display: flex;
+  justify-content: center;
+
+  }
+
+  .return{
+    margin-left: 50px;
+    padding-bottom: 100px;
+  }
+ 

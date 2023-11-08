@@ -1,18 +1,19 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './views/home';
-import MovieDetail from './views/movieDetail';
+import { OnlyMovie } from './views/onlyMovie';
 import Header from './components/header';
 
 
 function App() {
-  return (<React.StrictMode>
+  return ( 
+  <Router>
   <Header/>
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/detail" element={<MovieDetail />} />
+      <Route path="/detail/:id" element={<OnlyMovie />} />
     </Routes>
-    </React.StrictMode>
+    </Router>
   );
 }
 
